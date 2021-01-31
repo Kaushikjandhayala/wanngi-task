@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+      <div class="header">
+        <h1>Wanngi</h1>
+      </div>
+
+
+    <img src="SVG/Icon awesome-fire.svg" class="colorchange1" />
+    <img src="SVG/Icon awesome-mountain.svg" class="colorchange2" />
+    <img src="SVG/Icon ionic-ios-thermometer.svg" class="colorchange3" />
+    <img src="SVG/Icon metro-directions-bike.svg" class="colorchange4" />
+
+    <br>
+    <br>
+
+    <button>Click me</button>
+    <script type="text/javascript">
+      var color = ["#b3e6ff", "#ffff00", "#ffccff", "#ccffe6"];
+      const filters = [
+        "invert(88%) sepia(34%) saturate(2205%) hue-rotate(178deg) brightness(110%) contrast(101%)",
+        "invert(99%) sepia(98%) saturate(2489%) hue-rotate(358deg) brightness(101%) contrast(105%)",
+        "invert(93%) sepia(84%) saturate(5931%) hue-rotate(202deg) brightness(105%) contrast(104%)",
+        "invert(88%) sepia(3%) saturate(5477%) hue-rotate(175deg) brightness(116%) contrast(101%)",
+      ];
+      
+      var i = 0;
+      document.querySelector("button").addEventListener("click", () => {
+        i = i < filters.length ? ++i : 0;
+        document.querySelector(".colorchange1").style.backgroundColor =
+          color[i];
+        document.querySelector(".colorchange2").style.backgroundColor =
+          color[i];
+        document.querySelector(".colorchange3").style.backgroundColor =
+          color[i];
+        document.querySelector(".colorchange4").style.backgroundColor =
+          color[i];
+        document.querySelector("button").style.backgroundColor = color[i];
+      });
+
+    </script>
+  </body>
+</html>
